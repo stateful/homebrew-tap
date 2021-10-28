@@ -1,2 +1,3 @@
-# homebrew-cli
-A homebrew formulae for our CLI
+# homebrew-core
+
+A home for our Homebrew fomulas.
