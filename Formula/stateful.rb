@@ -5,20 +5,20 @@
 class Stateful < Formula
   desc ""
   homepage ""
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.7/stateful_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "1c7185293212fbc1395fa1484b427af903ca3522e11b94c889604342b25699be"
+      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.8/stateful_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "c3aec885a4618eff10456909a665b7f8c811288e4d1fe699bd579329c265766f"
 
       def install
         bin.install "stateful"
       end
     end
     if Hardware::CPU.arm?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.7/stateful_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "84a1a67da67579b4b01ede023479ef0552445f9df410f4428d1c233ebfcbaa26"
+      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.8/stateful_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "1f5ee6ef5227c6d932f0c35eee3f66b38f82c827d5158d7ca36d8c476cb0037d"
 
       def install
         bin.install "stateful"
@@ -28,24 +28,24 @@ class Stateful < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.7/stateful_linux_armv6.tar.gz", :using => CurlDownloadStrategy
-      sha256 "5b2da893d8429906d5f312ddec652ffcda880d14b83c42dd2c461f8371d5eacb"
+      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.8/stateful_linux_armv6.tar.gz", :using => CurlDownloadStrategy
+      sha256 "ba0e0ded24e2fa8813188604f48e90e7327b87d9dfd7b2f3de2a9e836e6f8c10"
 
       def install
         bin.install "stateful"
       end
     end
     if Hardware::CPU.intel?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.7/stateful_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "a3cd232dec39cf0faac02ab90ceb5edd462cc3bce48aa311cc4d16b8d81c19dd"
+      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.8/stateful_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "6d16757a73a4f75b788beeb2129d507681786cdb68ce6f6e7d38144199f9bb38"
 
       def install
         bin.install "stateful"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.7/stateful_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "18e4c81353836ea63cb10323fa4afe080e823d390e35afffbcc92ae72b8398c6"
+      url "https://storage.googleapis.com/stateful-cli-artifacts-adamb/0.0.8/stateful_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "84a4735cb7eb1b14acf6b6be5c41e9ed7967f954d66cfd5c1ad703c5ad3abdb3"
 
       def install
         bin.install "stateful"
