@@ -5,12 +5,12 @@
 class Stateful < Formula
   desc "CLI for Stateful - Optimize for flow, code better, be happy."
   homepage "https://stateful.com"
-  version "0.0.23-rc1"
+  version "0.0.23"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.0.23-rc1/stateful_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "cd595e46276f9e86c23cc3145fc937aaf6e2fdad2be0f538c0aa417e20b869c3"
+    if Hardware::CPU.intel?
+      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.0.23/stateful_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "bbc0b42a59e8fb6be05a4d7b1f9c9ba52ffc2d8ececc8b44e08fffd8ae4d50ed"
 
       def install
         bin.install "stateful"
@@ -19,9 +19,9 @@ class Stateful < Formula
         (zsh_completion/"_stateful").write `#{bin}/stateful completion zsh`
       end
     end
-    if Hardware::CPU.intel?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.0.23-rc1/stateful_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "4613d2ffd6490c56745c8287b971fb8f7df7b6e9f432818679db1f765364a34d"
+    if Hardware::CPU.arm?
+      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.0.23/stateful_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "44275b572faf78a0467d11c20645f9681268fde6c23d8283d6a6c067921910bf"
 
       def install
         bin.install "stateful"
@@ -34,8 +34,8 @@ class Stateful < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.0.23-rc1/stateful_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "b1c522f6540971c99e9733736d07618d4a94464d7f0c9867a7011bbfc5148037"
+      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.0.23/stateful_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "815feadb62a6f883597b50eb69c01389fe4a0ba6d0cfc497254229275f7089d7"
 
       def install
         bin.install "stateful"
@@ -45,8 +45,8 @@ class Stateful < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.0.23-rc1/stateful_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f74b20a504a84b61ff45faf01d4709975d3ef787bd07f50bed0f987028ce0531"
+      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.0.23/stateful_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "7791ff4f0d18a96cbd26489fe69725ab8ccfd49f118eeee166c93a93b3098810"
 
       def install
         bin.install "stateful"
