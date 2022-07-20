@@ -5,12 +5,12 @@
 class Rdme < Formula
   desc "Execute code snippets directly from Markdown files."
   homepage "https://stateful.com"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/rdme/0.1.2/rdme_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "639d8af14ef2b90bbe8eeba050f0286677a847e9c9d3828469b5f4d7a501c2b0"
+      url "https://download.stateful.com/rdme/0.1.3/rdme_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "56475c78e55b3576f121254fb9deceff7d936093c3a71158be634726fda325e8"
 
       def install
         bin.install "rdme"
@@ -20,8 +20,8 @@ class Rdme < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://download.stateful.com/rdme/0.1.2/rdme_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "08542951ab8b8de6476fab83dbc4ccb00a0fa3e07a17b4e551a4986d8b66a932"
+      url "https://download.stateful.com/rdme/0.1.3/rdme_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "5f3222a53f3a782a9db019962e32fd7cce7597cdb764df0fadca4532385e1966"
 
       def install
         bin.install "rdme"
@@ -33,9 +33,9 @@ class Rdme < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://download.stateful.com/rdme/0.1.2/rdme_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "6635248853ee84a1594c9c140e2a1e9f7eb046e2a9d6d186d6a21661503c4ed3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://download.stateful.com/rdme/0.1.3/rdme_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "d9ce2e886ff4f37e7556b809e74c15e99a342999cc3a63d1c1143ff59c84562c"
 
       def install
         bin.install "rdme"
@@ -44,9 +44,9 @@ class Rdme < Formula
         (zsh_completion/"_rdme").write `#{bin}/rdme completion zsh`
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.stateful.com/rdme/0.1.2/rdme_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "ca4d67a7d916553de1609b5ad2abb94b566bc6b5cc0e2c2fb9648d74dceb3a2e"
+    if Hardware::CPU.intel?
+      url "https://download.stateful.com/rdme/0.1.3/rdme_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "185f9d701079782881a4c5d8193f213be7dc5e9cfd92e253119e7bec78de4f74"
 
       def install
         bin.install "rdme"
