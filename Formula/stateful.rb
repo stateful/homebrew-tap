@@ -5,12 +5,12 @@
 class Stateful < Formula
   desc "CLI for Stateful - Optimize for flow, code better, be happy."
   homepage "https://stateful.com"
-  version "0.1.8"
+  version "0.1.9"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://download.stateful.com/stateful-cli/0.1.8/stateful_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "ce4eecb83cc59798469b800cd74a8e01b4c9841d272ce0769df8195ba4d8ac93"
+      url "https://download.stateful.com/stateful-cli/0.1.9/stateful_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9915fe612bc6b68eb7dce6451ed80725ade8811bace167e501eef06cc1cd045b"
 
       def install
         bin.install "stateful"
@@ -20,8 +20,8 @@ class Stateful < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/stateful-cli/0.1.8/stateful_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "028ac8630f73ac8ab3f00052d80fedcd45f7505e329bbc5a8ca1f71e0710360e"
+      url "https://download.stateful.com/stateful-cli/0.1.9/stateful_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "0d2833afbc6b4b6dc815edf878ff17465dcd97aab0f3b95ac5f22511ca881c5b"
 
       def install
         bin.install "stateful"
@@ -34,8 +34,8 @@ class Stateful < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/stateful-cli/0.1.8/stateful_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "fcab33e9ee3b02aa98e0b14e7d5f57ffe444fe9435597dbfd7abb99cd5a28728"
+      url "https://download.stateful.com/stateful-cli/0.1.9/stateful_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5c0acccecbf70e74758e8f302c4740013e0b1e780159ed3065c99b2923f6f15b"
 
       def install
         bin.install "stateful"
@@ -45,8 +45,8 @@ class Stateful < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.stateful.com/stateful-cli/0.1.8/stateful_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c64719af2fbb48dfe8f8e4f9e75f426cf9f9f4a67575a42ca137800c843c1e9a"
+      url "https://download.stateful.com/stateful-cli/0.1.9/stateful_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "9b80a4d1492957ed9115692ede90f0831391e199e3b933a8c31c7f7733baad74"
 
       def install
         bin.install "stateful"
