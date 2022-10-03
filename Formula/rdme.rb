@@ -5,12 +5,12 @@
 class Rdme < Formula
   desc "Execute code snippets directly from Markdown files."
   homepage "https://stateful.com"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://download.stateful.com/rdme/0.1.7/rdme_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "612eb82db5b2c4cc284002d4076855a9753374c5695a62f85e4219bf84d52323"
+      url "https://download.stateful.com/rdme/0.1.8/rdme_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "e1958f32673bd773f7413e1ae247ae47c40b78fbc84f4a1d684d27ef6bd796cf"
 
       def install
         bin.install "rdme"
@@ -20,8 +20,8 @@ class Rdme < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/rdme/0.1.7/rdme_darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "dbdf8a4b61efaf5fc8aec49a706904dbd6e8366dad393bcf99f97f4f824804e3"
+      url "https://download.stateful.com/rdme/0.1.8/rdme_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "aeb0da5b940b0d196c4176a491be04dbd7bc45dd2f9ef9900f09ba4fe49e3ae6"
 
       def install
         bin.install "rdme"
@@ -34,8 +34,8 @@ class Rdme < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/rdme/0.1.7/rdme_linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "11f37dae4385591fda1edc43002587e2194605618ead7ddd8b8fd9e78651e360"
+      url "https://download.stateful.com/rdme/0.1.8/rdme_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "af17c9773e51ef6c330a764e4c90e1bf056221a434b4209f7477051659c698fa"
 
       def install
         bin.install "rdme"
@@ -45,8 +45,8 @@ class Rdme < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.stateful.com/rdme/0.1.7/rdme_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "8172518838367385b480b8d8c04f111a5a104baea4600629338271fb1e057638"
+      url "https://download.stateful.com/rdme/0.1.8/rdme_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "18cc707cae64b84708e081ec37c54b698d5960eaf5418286d6879276fcf1131b"
 
       def install
         bin.install "rdme"
