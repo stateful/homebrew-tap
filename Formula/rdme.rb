@@ -5,12 +5,12 @@
 class Rdme < Formula
   desc "Execute code snippets directly from Markdown files."
   homepage "https://stateful.com"
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/rdme/0.1.9/rdme_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d052af9e6cebad43ab297fa74ba378a9ae7e1999134f9fba560d5e8aa7cd8eb5"
+      url "https://download.stateful.com/rdme/0.1.10/rdme_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "448570560f4b6544326ed1270b04f9e2997d84be6704e7b6a6103a6f15b8ddbd"
 
       def install
         bin.install "rdme"
@@ -20,8 +20,8 @@ class Rdme < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://download.stateful.com/rdme/0.1.9/rdme_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c202a2df9f7f38fec8fcc64942a3afd6951733f4a42beec2ddb47c1458196a1d"
+      url "https://download.stateful.com/rdme/0.1.10/rdme_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "12c098e5602925111d77855145a78ce40cdcb0115d146a83e9e2cffd2ae03918"
 
       def install
         bin.install "rdme"
@@ -34,8 +34,8 @@ class Rdme < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/rdme/0.1.9/rdme_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e33cd3fb97c916b587736578fb41b4e8e2818dd42275d79904a059ae482508eb"
+      url "https://download.stateful.com/rdme/0.1.10/rdme_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c218b898c80f279da4c661313e159ff839c3500381b2e4202991b0d05470b29d"
 
       def install
         bin.install "rdme"
@@ -45,8 +45,8 @@ class Rdme < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.stateful.com/rdme/0.1.9/rdme_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4585ab2416fc8b2d34194a4b15dcd9249dbe6df793a744fe5191c567f5b7261c"
+      url "https://download.stateful.com/rdme/0.1.10/rdme_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "fcc34147a9b4ef8df6967947e767050e931c3d7bbd219eca9d26b7778e112e07"
 
       def install
         bin.install "rdme"
