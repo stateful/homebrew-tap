@@ -5,12 +5,12 @@
 class Runme < Formula
   desc "Execute code snippets directly from Markdown files."
   homepage "https://stateful.com"
-  version "0.6.5"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/runme/0.6.5/runme_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "812363294c7ac80570acbd6c40d8eccd150f23282beb04b122f6149e2bec3ccb"
+      url "https://download.stateful.com/runme/0.7.0/runme_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6a6b4213356a901c47a11a5623067fbb68d79164ce6d66feaaac5d1e605e4495"
 
       def install
         bin.install "runme"
@@ -20,8 +20,8 @@ class Runme < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://download.stateful.com/runme/0.6.5/runme_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e61f940c891a07f5137be2efab39f40bd18dcf70bc2b70f1ea6173f2bbfb34b6"
+      url "https://download.stateful.com/runme/0.7.0/runme_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "40b97aee14b7c335909de2641571cc61a3fe415dd107889531f5d4ee357e4628"
 
       def install
         bin.install "runme"
@@ -34,8 +34,8 @@ class Runme < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.stateful.com/runme/0.6.5/runme_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cc8259cd8f001e128641ca2d191dcbf1363745d06d5849ee3ca56330946c676b"
+      url "https://download.stateful.com/runme/0.7.0/runme_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "058ed6e42ef35a7a1a8448f8f13d802d900255438de22e012b57d723112d7736"
 
       def install
         bin.install "runme"
@@ -45,8 +45,8 @@ class Runme < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/runme/0.6.5/runme_linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a27b0dc34655e43c9e145aa63ada5b411aff42fff0b6c71e31015c60193a86b9"
+      url "https://download.stateful.com/runme/0.7.0/runme_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "016ab1d671c351d2247a27918e1003c5174c3cb7156fb02fdb337ce366b812fe"
 
       def install
         bin.install "runme"
