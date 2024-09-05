@@ -9,7 +9,7 @@ class Rdme < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/rdme/0.1.12/rdme_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      url "https://storage.googleapis.com/rdme-artifacts-b4e64f/0.1.12/rdme_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
       sha256 "6a1adb93db7496fb0611ab6468341e7514ce1735879b65ecb7ffe03a60037cdd"
 
       def install
@@ -20,7 +20,7 @@ class Rdme < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://download.stateful.com/rdme/0.1.12/rdme_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      url "https://storage.googleapis.com/rdme-artifacts-b4e64f/0.1.12/rdme_darwin_arm64.tar.gz", using: CurlDownloadStrategy
       sha256 "31251317118228fde501ca982508356162fe6607b9dd8d5e942f39897d8ac87b"
 
       def install
@@ -34,7 +34,7 @@ class Rdme < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.stateful.com/rdme/0.1.12/rdme_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      url "https://storage.googleapis.com/rdme-artifacts-b4e64f/0.1.12/rdme_linux_arm64.tar.gz", using: CurlDownloadStrategy
       sha256 "4415b7dbff19439fe718f02c212d18121d4e81ffc66d68531cd4584517f46c08"
 
       def install
@@ -45,7 +45,7 @@ class Rdme < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/rdme/0.1.12/rdme_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      url "https://storage.googleapis.com/rdme-artifacts-b4e64f/0.1.12/rdme_linux_x86_64.tar.gz", using: CurlDownloadStrategy
       sha256 "db3d6b55cf55bc025df16a822ebdcd14ba2da31b90124d3aecae246dbd18b5da"
 
       def install
