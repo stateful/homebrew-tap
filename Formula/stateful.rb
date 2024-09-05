@@ -9,7 +9,7 @@ class Stateful < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/stateful-cli/0.1.11/stateful_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.1.11/stateful_darwin_x86_64.tar.gz", using: CurlDownloadStrategy
       sha256 "9436b33840b526488dd3f81c4e559f4f4e45ed7572cd84d8476089f54e7173f5"
 
       def install
@@ -20,7 +20,7 @@ class Stateful < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://download.stateful.com/stateful-cli/0.1.11/stateful_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.1.11/stateful_darwin_arm64.tar.gz", using: CurlDownloadStrategy
       sha256 "68969068b81a3c1b7bb63636d716930ff69431bcd5082ee95757ee50bc83aeaa"
 
       def install
@@ -34,7 +34,7 @@ class Stateful < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://download.stateful.com/stateful-cli/0.1.11/stateful_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.1.11/stateful_linux_arm64.tar.gz", using: CurlDownloadStrategy
       sha256 "5f8dc56768b5d8e2d7161f86bb82f49560bebe26a6d4f5b8beb154e1d5a668c4"
 
       def install
@@ -45,7 +45,7 @@ class Stateful < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://download.stateful.com/stateful-cli/0.1.11/stateful_linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      url "https://storage.googleapis.com/stateful-cli-artifacts-a1a00b/0.1.11/stateful_linux_x86_64.tar.gz", using: CurlDownloadStrategy
       sha256 "d66232b8503bb4b0e58b64503723c607e1ed5598c6b983d375bf9e6d79ed459f"
 
       def install
